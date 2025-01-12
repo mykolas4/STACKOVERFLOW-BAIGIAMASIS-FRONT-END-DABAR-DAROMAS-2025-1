@@ -1,0 +1,31 @@
+.navbar {
+  min-height: 50px;
+  width: 100%;
+  margin: 0% auto;
+  border-top: solid 1.5px #ef8236;
+  box-shadow: 0px 1px 5px #00000053;
+  position: fixed;
+  z-index: 5;
+  top: 0%;
+  left: 0%;
+  background-color: #f8f9f9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 85%;
+}
+
+.navbar form input {
+    min-width: 90%;
+    margin: 0;
+    padding: 8px 10px 8px 32px;
+    font-size: 13px;
+    border: solid 1px #f000003e;
+    border-radius: 3px
+}
+.navbar form .searchicon {
+    position: absolute;
+    left: 25px;
+    top: 8px;
+    
+}
