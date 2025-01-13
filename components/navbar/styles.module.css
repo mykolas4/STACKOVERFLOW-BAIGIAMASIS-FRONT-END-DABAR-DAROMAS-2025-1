@@ -16,16 +16,32 @@
 }
 
 .navbar form input {
-    min-width: 90%;
-    margin: 0;
-    padding: 8px 10px 8px 32px;
-    font-size: 13px;
-    border: solid 1px #f000003e;
-    border-radius: 3px
+  min-width: 90%;
+  margin: 0;
+  padding: 8px 10px 8px 32px;
+  font-size: 13px;
+  border: solid 1px #f000003e;
+  border-radius: 3px;
 }
-.navbar form .searchicon {
-    position: absolute;
-    left: 25px;
-    top: 8px;
-    
+
+.navlinks {
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  border: solid 0.5px rgb(4, 255, 0);
+}
+.logout {
+  border: solid 0.5px rgb(255, 0, 0);
+  border-radius: 3px;
+  background-color: whitesmoke;
+}
+.avatar {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  background-color: #009dff;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
 }
