@@ -11,14 +11,14 @@ const Auth = () => {
   };
 
   return (
-    <section class="authsection">
+    <section class={styles.authsection}>
       {isSignup && <AboutAuth />}
       <p>
       By clicking “Sign up”, you agree to our <span>terms</span> of <span>service</span> and acknowledge you have read our <span>privacy policy</span></p>
       <h1>Create your account</h1>
-      <div class="authcontainer">
+      <div class={styles.authcontainer}>
         {!isSignup && (
-          <img src={icon.src} alt="stackoverflow" className="loginlogo" />
+          <img src={icon.src} alt="stackoverflow" className={styles.loginlogo} />
         )}
         <form>
           {isSignup && (
@@ -33,7 +33,7 @@ const Auth = () => {
             <div>
               <h4>Password</h4>
 
-              {!isSignup && <h4>Forgot password?</h4>}
+              {!isSignup && <h4></h4>}
             </div>
             <input type="password" name="password" id="password" />
             {isSignup && (
