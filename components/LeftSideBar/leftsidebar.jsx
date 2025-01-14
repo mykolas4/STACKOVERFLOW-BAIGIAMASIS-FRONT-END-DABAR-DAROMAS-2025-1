@@ -13,7 +13,6 @@ const leftsidebar = () => {
         ></NavLink>
         <div className={styles.sidenavdiv}>
           <div>
-            <p>Home</p>
             <NavLink
               to="/Questions"
               className={styles.sidenavlinks}

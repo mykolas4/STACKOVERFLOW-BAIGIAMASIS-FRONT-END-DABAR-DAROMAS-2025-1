@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "@/components/HomeMainBar/styles.module.css";
 import { Link, useLocation } from "react-router-dom";
+import Questions from "./Questions";
 import QuestionList from "./QuestionList";
-import Questions from "./Questions"
+
 const homemainbar = () => {
   const questionsList = [
     {
@@ -18,8 +19,8 @@ const homemainbar = () => {
     {
       id: 2,
       votes: 3,
-      noOfAnswers: 2,
-      questionTitle: "2 question",
+      noOfAnswers: 3,
+      questionTitle: "2 questions",
       questionBody: "kmkmmkklm",
       questionTags: ["knadskakds"],
       userPosted: "jjkjk",
@@ -27,9 +28,9 @@ const homemainbar = () => {
     },
     {
       id: 3,
-      votes: 3,
-      noOfAnswers: 2,
-      questionTitle: "2 question",
+      votes: 5,
+      noOfAnswers: 5,
+      questionTitle: "3 questions",
       questionBody: "kmkmmkklm",
       questionTags: ["knadskakds"],
       userPosted: "jjkjk",
@@ -57,6 +58,7 @@ const homemainbar = () => {
         ) : (
           <>
             <p>{questionsList.length} questions </p>
+
             <Questions />
           </>
         )}

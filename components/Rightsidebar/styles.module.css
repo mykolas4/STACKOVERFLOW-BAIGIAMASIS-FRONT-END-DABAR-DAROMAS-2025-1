@@ -45,15 +45,21 @@
   background-color: #fbf3d5;
 }
 
-.widgettagsdiv {
-  position: fixed;
-  padding: 10px;
-}
 
-.widgettags {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+  .widgettags {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: white;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
   }
-  
+
+  .widgettagsdiv {
+    flex-wrap: wrap;
+  }
+  .widgettags p {
+    margin: 5px;
+  }
