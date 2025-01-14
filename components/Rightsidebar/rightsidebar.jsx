@@ -1,8 +1,14 @@
 import React from 'react'
-
+import styles from "@/components/Rightsidebar/styles.module.css"
+import Widget from './Widget'
+import WidgetTags from './WidgetTags'
 const rightsidebar = () => {
   return (
-    <div>rightsidebar</div>
+    <aside className={styles.rightsidebar} >
+        <Widget />
+        <WidgetTags />
+    </aside>
+    
   )
 }
 
