@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "@/components/HomeMainBar/styles.module.css";
 import { Link, useLocation } from "react-router-dom";
-import Questions from "@/pages/Questions/Questions"
+import QuestionList from "./QuestionList";
+import Questions from "./Questions"
 const homemainbar = () => {
   const questionsList = [
     {
@@ -46,19 +47,19 @@ const homemainbar = () => {
         ) : (
           <h1>All questions</h1>
         )}
-        <Link to="/AskQuestion" className={styles.askbtn}>Ask question</Link>
+        <Link to="/AskQuestion" className={styles.askbtn}>
+          Ask question
+        </Link>
       </div>
       <div>
-        {
-          questionsList === null ?
-          <h1>Loading...</h1>  : 
-
-        <p> {questionsList.length} questions
-        </p>
-}
-        <>
-        <Questions />
-        </>
+        {questionsList === null ? (
+          <h1>Loading...</h1>
+        ) : (
+          <>
+            <p>{questionsList.length} questions </p>
+            <Questions />
+          </>
+        )}
       </div>
     </div>
   );
