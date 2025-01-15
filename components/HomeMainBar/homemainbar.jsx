@@ -2,10 +2,11 @@ import React from "react";
 import styles from "@/components/HomeMainBar/styles.module.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Questions from "./Questions";
+import DisplayQuestion from "@/pages/Questions/DisplayQuestion";
 
 const HomeMainBar = () => {
   const location = useLocation();
-  const user = 1;
+  const user = null;
   const navigate = useNavigate();
 
   const questionsList = [
@@ -64,7 +65,7 @@ const HomeMainBar = () => {
       </div>
 
       <>
-        <p>{questionsList.length} questions</p>
+        <p>{DisplayQuestion.length} questions</p>
         <Questions />
       </>
     </div>

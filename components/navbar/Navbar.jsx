@@ -1,9 +1,7 @@
 import React from "react";
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
-import Avatar from "@/components/Avatar/Avatar";
 import styles from "@/components/navbar/styles.module.css";
-import avatar from "@/assets/avatar.svg"
 const Navbar = () => {
 
   const user = 123
@@ -25,10 +23,6 @@ const Navbar = () => {
         <form>
           <input type="text" placeholder="Search..." />
         </form>
-        <Link to="/User">
-        <div className={styles.avatar} >
-            <Avatar>avatar</Avatar></div>
-          </Link>
         <Link to="/Auth" className={styles.navlinks}>
           Log in
         </Link>

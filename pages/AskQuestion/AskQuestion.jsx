@@ -18,7 +18,7 @@ const AskQuestion = () => {
               </p>
               <input
                 type="text"
-                id="askquestitle"
+                id="askquesbody"
                 placeholder="e.g. Is there an R function for finding the index of an element in a vector?"
               />
             </label>
@@ -35,20 +35,20 @@ const AskQuestion = () => {
                 placeholder="e.g. Is there an R function for finding the index of an element in a vector?"
               />
             </label>
-            <label htmlFor={styles.askquestitle}>
-              <h4>Title</h4>
+            <label htmlFor={styles.askquestags}>
+              <h4>Tags</h4>
 
               <p>
-                Be specific and imagine you're asking a question to another
-                person
+               Add up to 5 tags to describe what your qouestion is about
               </p>
               <input
                 type="text"
-                id="askquestitle"
-                placeholder="e.g. Is there an R function for finding the index of an element in a vector?"
+                id="askquestags"
+                placeholder="e.g. (xml typescript wordpress)"
               />
             </label>
           </div>
+          <input type="submit" value="Review your question"/>
         </form>
       </div>
     </div>

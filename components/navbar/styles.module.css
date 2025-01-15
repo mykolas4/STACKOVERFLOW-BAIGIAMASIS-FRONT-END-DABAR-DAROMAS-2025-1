@@ -34,14 +34,3 @@
   border-radius: 3px;
   background-color: whitesmoke;
 }
-.avatar {
-  display: flex;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  background-color: #009dff;
-  border-radius: 50%;
-  color: white;
-  text-decoration: none;
-}
