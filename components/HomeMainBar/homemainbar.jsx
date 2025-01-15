@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "@/components/HomeMainBar/styles.module.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Questions from "./Questions";
-import QuestionList from "./QuestionList";
 
-const homemainbar = () => {
+const HomeMainBar = () => {
+  const location = useLocation();
+  const user = 1;
+  const navigate = useNavigate();
+
   const questionsList = [
     {
       id: 1,
@@ -38,7 +41,14 @@ const homemainbar = () => {
     },
   ];
 
-  const location = useLocation();
+  const checkAuth = () => {
+    if (user === null) {
+      alert("login or signup to ask a question");
+      navigate("/Auth");
+    } else {
+      navigate("/AskQuestion");
+    }
+  };
 
   return (
     <div className={styles.mainbar}>
@@ -48,23 +58,17 @@ const homemainbar = () => {
         ) : (
           <h1>All questions</h1>
         )}
-        <Link to="/AskQuestion" className={styles.askbtn}>
+        <button onClick={checkAuth} className={styles.askbtn}>
           Ask question
-        </Link>
+        </button>
       </div>
-      <div>
-        {questionsList === null ? (
-          <h1>Loading...</h1>
-        ) : (
-          <>
-            <p>{questionsList.length} questions </p>
 
-            <Questions />
-          </>
-        )}
-      </div>
+      <>
+        <p>{questionsList.length} questions</p>
+        <Questions />
+      </>
     </div>
   );
 };
 
-export default homemainbar;
+export default HomeMainBar;

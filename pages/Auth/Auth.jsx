@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import styles from "@/pages/Auth/styles.module.css";
 import icon from "@/assets/icon.svg";
@@ -12,18 +13,24 @@ const Auth = () => {
 
   return (
     <section class={styles.authsection}>
-      {isSignup && <AboutAuth />}
-      <p>
-      By clicking “Sign up”, you agree to our <span>terms</span> of <span>service</span> and acknowledge you have read our <span>privacy policy</span></p>
-      <h1>Create your account</h1>
-      <div class={styles.authcontainer}>
-        {!isSignup && (
-          <img src={icon.src} alt="stackoverflow" className={styles.loginlogo} />
-        )}
-        <form>
-          {isSignup && (
-            <label htmlFor="name">
-            </label>
+    {isSignup && <AboutAuth />}
+    <h1>Create your account</h1>
+    <div class={styles.authcontainer}>
+      {!isSignup && (
+        <img src={icon.src} alt="stackoverflow" className={styles.loginlogo} />
+      )}
+        {isSignup && (
+          <label htmlFor="name">
+            <h4>Display Name</h4>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+            />
+          </label>
           )}
           <label htmlFor="email">
             <h4>Email</h4>
@@ -47,7 +54,6 @@ const Auth = () => {
           <button type="submit" className="authbtn">
             {isSignup ? "Sign up" : "Log in"}{" "}
           </button>
-        </form>
         <p>
           {isSignup ? "Already have an account?" : "Don't have an account?"}
           <button
