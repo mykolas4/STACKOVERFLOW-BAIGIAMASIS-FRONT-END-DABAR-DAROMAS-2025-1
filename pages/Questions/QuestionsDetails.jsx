@@ -1,6 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-const QuestionsDetails = () => {
+import styles from "@/pages/Questions/styles.module.css";
+import Questions from "./Questions";
+
+const QuestionsDetails = ({questions }) => {
   const { id } = useParams();
 
   const questionsList = [
@@ -36,25 +39,27 @@ const QuestionsDetails = () => {
     },
   ];
 
-  return (
-    <div className={styles.questiondetailspage}>
-      {questionsList === null ? (
-        <h1>Loading...</h1>
-      ) : (
-        <>
-          {questionsList
-            .filter((question) => question.id === id)
-            .map((question) => {})}
-            <div key={question.id}>
-                <section className={styles.quesitonsdetailscontainer}>
-                    <h1>{Questions.questionTitle}</h1>
-                    <div>
+  const questionId = parseInt(id); 
 
-                    </div>
-                </section>
-            </div>
-        </>
-      )}
+  const questionDetail = questionsList.find((question) => question.id === questionId);
+
+  return (
+    <div className={styles.mainbar}>
+      <div className={styles.mainbarheader}>
+        {location.pathname === "/" ? (
+          <h1>Top questions</h1>
+        ) : (
+          <h1>All questions</h1>
+        )}
+        <button onClick={checkAuth} className={styles.askbtn}>
+          Ask question
+        </button>
+      </div>
+
+      <>
+      <p>{questionsList.length} questions</p>
+      <Questions questions={questionsList} /> 
+      </>
     </div>
   );
 };

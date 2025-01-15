@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "@/components/HomeMainBar/styles.module.css";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Questions from "./Questions";
-import DisplayQuestion from "@/pages/Questions/DisplayQuestion";
+import QuestionsDetails from "@/pages/Questions/QuestionsDetails";
 
 const HomeMainBar = () => {
   const location = useLocation();
-  const user = null;
+  const user = 1; 
   const navigate = useNavigate();
 
   const questionsList = [
@@ -16,7 +16,7 @@ const HomeMainBar = () => {
       noOfAnswers: 2,
       questionTitle: "1 question",
       questionBody: "kmkmmkklm",
-      questionTags: ["knadskakds"],
+      questionTags: "knadskakds",
       userPosted: "jjkjk",
       askedOn: "feb",
     },
@@ -26,7 +26,7 @@ const HomeMainBar = () => {
       noOfAnswers: 3,
       questionTitle: "2 questions",
       questionBody: "kmkmmkklm",
-      questionTags: ["knadskakds"],
+      questionTags: "knadskakds",
       userPosted: "jjkjk",
       askedOn: "feb",
     },
@@ -36,7 +36,7 @@ const HomeMainBar = () => {
       noOfAnswers: 5,
       questionTitle: "3 questions",
       questionBody: "kmkmmkklm",
-      questionTags: ["knadskakds"],
+      questionTags: "knadskakds",
       userPosted: "jjkjk",
       askedOn: "feb",
     },
@@ -65,8 +65,8 @@ const HomeMainBar = () => {
       </div>
 
       <>
-        <p>{DisplayQuestion.length} questions</p>
-        <Questions />
+        <p>{questionsList.length} questions</p>
+        <Questions questions={questionsList} /> 
       </>
     </div>
   );

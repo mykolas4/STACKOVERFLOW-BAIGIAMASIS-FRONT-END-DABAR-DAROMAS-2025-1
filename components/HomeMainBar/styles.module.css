@@ -1,55 +1,99 @@
-
 .displayanscontainer {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px 0;
-    background-color: #f9f9f9;
-  }
-  
-  .displayvotesans {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-  
-  .questiontitlelink {
-    font-size: 18px;
-    font-weight: bold;
-    color: #007bff; 
-    text-decoration: none;
-  }
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #f9f9f9;
+}
 
-  .mainbar {
-    width: calc(100%-300px -24px);
-    float: left;
-    margin: 25px 0px;
-    padding: 0;
-  }
+.displayvotesans {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
 
-  .mainbarheader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.questiontitlelink {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
 
-  .mainbarheader h1 {
-    font-weight: 400;
-  }
+.mainbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.mainbarheader {
+  text-align: center;
+}
 
 .askbtn {
-    padding: 10px;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    text-decoration: none;
-    transition: 0.3s;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .askbtn:hover {
-    background-color: #0086d8;
+  background-color: #0056b3;
 }
-  
-  
+
+.questionscontainer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 0;
+}
+
+.questioncard {
+  display: flex;
+  background-color: #e2db0c;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.questioncard:hover {
+  transform: scale(1.02);
+}
+
+.questiontitle {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin: 0 0 10px;
+  text-decoration: none;
+}
+
+.questiontitle:hover {
+  text-decoration: underline;
+}
+
+.questionbody {
+  font-size: 1rem;
+  color: #333333;
+  margin: 0 0 10px;
+}
+
+.questionstats {
+  font-size: 0.9rem;
+  color: #555555;
+  margin: 0 0 10px;
+}
+
+.questionmeta {
+  font-size: 0.8rem;
+  color: #888888;
+  margin: 0;
+}
