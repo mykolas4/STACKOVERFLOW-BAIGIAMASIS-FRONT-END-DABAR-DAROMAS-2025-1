@@ -1,20 +1,15 @@
 import React from "react";
 import LeftSideBar from "@/components/LeftSideBar/leftsidebar";
 import Rightsidebar from "@/components/Rightsidebar/rightsidebar";
-import QuestionsDetails from "./QuestionsDetails";
-
+import QuestionsDetails from "@/pages/Questions/QuestionsDetails";
+import styles from "@/pages/Questions/styles.module.css"
 
 const DisplayQuestion = () => {
   return (
     
-      <div className={styles.homecontainer}>
-        <LeftSideBar />
-        <Questions />
-        <div className={styles.homecontainer2}>
-            <QuestionsDetails />
-          <Rightsidebar />
+      <div className>
+        <QuestionsDetails/>
       </div>
-    </div>
   );
 };
 

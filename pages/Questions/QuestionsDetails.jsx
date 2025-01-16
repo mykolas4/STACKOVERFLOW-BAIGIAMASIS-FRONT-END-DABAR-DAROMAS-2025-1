@@ -1,14 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "@/pages/Questions/styles.module.css";
-import Questions from "./Questions";
 
-const QuestionsDetails = ({questions }) => {
+const QuestionsDetails = () => {
   const { id } = useParams();
 
   const questionsList = [
     {
-      id: 1,
+      id: '1',
       votes: 3,
       noOfAnswers: 2,
       questionTitle: "1 question",
@@ -18,7 +17,7 @@ const QuestionsDetails = ({questions }) => {
       askedOn: "feb",
     },
     {
-      id: 2,
+      id: '2',
       votes: 3,
       noOfAnswers: 3,
       questionTitle: "2 questions",
@@ -28,7 +27,7 @@ const QuestionsDetails = ({questions }) => {
       askedOn: "feb",
     },
     {
-      id: 3,
+      id: '3',
       votes: 5,
       noOfAnswers: 5,
       questionTitle: "3 questions",
@@ -39,27 +38,27 @@ const QuestionsDetails = ({questions }) => {
     },
   ];
 
-  const questionId = parseInt(id); 
-
-  const questionDetail = questionsList.find((question) => question.id === questionId);
+  const question = questionsList.find((question) => question.id === id);
 
   return (
-    <div className={styles.mainbar}>
-      <div className={styles.mainbarheader}>
-        {location.pathname === "/" ? (
-          <h1>Top questions</h1>
-        ) : (
-          <h1>All questions</h1>
-        )}
-        <button onClick={checkAuth} className={styles.askbtn}>
-          Ask question
-        </button>
-      </div>
-
-      <>
-      <p>{questionsList.length} questions</p>
-      <Questions questions={questionsList} /> 
-      </>
+    <div className={styles.questiondetailspage}>
+      {!question ? ( 
+        <h1>Loading...</h1>
+      ) : (
+        <div key={question.id}>  
+          <section className={styles.questionsdetailscontainer}>
+            <h1>{question.questionTitle}</h1> 
+            <div>
+              <div className={styles.container}>
+                <h1>{question.questionBody}</h1>
+              </div>
+              <p>{question.votes} votes</p>
+              <p>{question.noOfAnswers} answers</p>
+              <p>Asked by: {question.userPosted} on {question.askedOn}</p>
+            </div>
+          </section>
+        </div>
+      )}
     </div>
   );
 };

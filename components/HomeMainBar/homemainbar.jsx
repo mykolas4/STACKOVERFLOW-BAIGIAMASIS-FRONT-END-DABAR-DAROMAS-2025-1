@@ -6,7 +6,7 @@ import QuestionsDetails from "@/pages/Questions/QuestionsDetails";
 
 const HomeMainBar = () => {
   const location = useLocation();
-  const user = 1; 
+  const user = null; 
   const navigate = useNavigate();
 
   const questionsList = [
