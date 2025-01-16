@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav>
       <div className={styles.navbar}>
         <Link to="/" className="nav-item nav-btn">
-          <img src={logo.src} alt="logo" width="100" height="100"></img>
+          <img src={logo.src} alt="logo" width="200" height="100"></img>
         </Link>
         <Link to="/" className="nav-item nav-btn">
           About

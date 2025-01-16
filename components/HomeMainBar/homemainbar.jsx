@@ -6,7 +6,7 @@ import QuestionsDetails from "@/pages/Questions/QuestionsDetails";
 
 const HomeMainBar = () => {
   const location = useLocation();
-  const user = null; 
+  const user = null;
   const navigate = useNavigate();
 
   const questionsList = [
@@ -19,26 +19,50 @@ const HomeMainBar = () => {
       questionTags: "knadskakds",
       userPosted: "jjkjk",
       askedOn: "feb",
+      answer: [
+        {
+          answerBody: "Answer",
+          userAnswered: "kumar",
+          answeredOn: "jan2",
+          userId: 2,
+        },
+      ],
     },
     {
-      id: 2,
+      id: 1,
       votes: 3,
-      noOfAnswers: 3,
-      questionTitle: "2 questions",
+      noOfAnswers: 2,
+      questionTitle: "2 question",
       questionBody: "kmkmmkklm",
       questionTags: "knadskakds",
       userPosted: "jjkjk",
       askedOn: "feb",
+      answer: [
+        {
+          answerBody: "Answer",
+          userAnswered: "kumar",
+          answeredOn: "jan2",
+          userId: 2,
+        },
+      ],
     },
     {
-      id: 3,
-      votes: 5,
-      noOfAnswers: 5,
-      questionTitle: "3 questions",
+      id: 1,
+      votes: 3,
+      noOfAnswers: 2,
+      questionTitle: "3 question",
       questionBody: "kmkmmkklm",
       questionTags: "knadskakds",
       userPosted: "jjkjk",
       askedOn: "feb",
+      answer: [
+        {
+          answerBody: "Answer",
+          userAnswered: "kumar",
+          answeredOn: "jan2",
+          userId: 2,
+        },
+      ],
     },
   ];
 
@@ -66,7 +90,7 @@ const HomeMainBar = () => {
 
       <>
         <p>{questionsList.length} questions</p>
-        <Questions questions={questionsList} /> 
+        <Questions questions={questionsList} />
       </>
     </div>
   );
